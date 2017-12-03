@@ -13,8 +13,8 @@ git init : Initialise a local folder with git
 
 ****************************************************************************************
 git add <filename/.(period)> : Adds file to Staged area for Commit
-							   filename for adding particular file
-							   (.) for adding all file
+			       filename for adding particular file
+			       (.) for adding all file
 
 ****************************************************************************************
 git status : Provide a report of current branch and changes that are not commited
