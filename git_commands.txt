@@ -1,0 +1,113 @@
+GIT command for reference.
+****************************************************************************************
+git clone <github-URL-Link> : Clone github repository to local computer
+
+$ git clone https://github.com/saravananvsp/Python_Udemy.git
+Cloning into 'Python_Udemy'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+****************************************************************************************
+git init : Initialise a local folder with git
+
+****************************************************************************************
+git add <filename/.(period)> : Adds file to Staged area for Commit
+							   filename for adding particular file
+							   (.) for adding all file
+
+****************************************************************************************
+git status : Provide a report of current branch and changes that are not commited
+
+-------------BEFORE ADDING-------------
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        myprogram.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+-------------AFTER ADDING---------------
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   README.md
+        new file:   myprogram.py
+
+-------------AFTER COMMIT---------------
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+****************************************************************************************
+git commit -m <"messages for reference"> : Update the changes from staged area and version it
+
+$ git commit -m "Added .py file and edited README.md"
+[master 55ad891] Added .py file and edited README.md
+ 2 files changed, 3 insertions(+)
+ create mode 100644 myprogram.py
+
+****************************************************************************************
+git log : Provides commit history for the current git repository
+
+$ git log
+commit 55ad89135ca5b404c60b75e07e80b67ff738997b (HEAD -> master)
+Author: Saravanan Paramasivan <saravananvsp@gmail.com>
+Date:   Sun Dec 3 13:21:58 2017 +0530
+
+    Added .py file and edited README.md
+
+commit da868c3453b185221afd94514c7ac2e7ff20fd32 (origin/master, origin/HEAD)
+Author: saravananvsp <saravananvsp@gmail.com>
+Date:   Sun Dec 3 13:01:25 2017 +0530
+
+    Initial commit
+
+****************************************************************************************
+git push : Push the local changes/commit to github repository
+
+$ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 419 bytes | 419.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/saravananvsp/Python_Udemy.git
+   da868c3..55ad891  master -> master
+
+---------------ALREADY PUSHED--------------
+$ git push origin master
+Everything up-to-date
+
+****************************************************************************************
+git pull : Pull github repository changes to local repository
+
+$ git pull origin master
+From https://github.com/saravananvsp/Python_Udemy
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+****************************************************************************************
+git branch : lists the branches present in the current repository
+
+$ git branch
+* master
+
+****************************************************************************************
