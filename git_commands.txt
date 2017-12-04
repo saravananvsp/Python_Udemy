@@ -111,3 +111,7 @@ $ git branch
 * master
 
 ****************************************************************************************
+git config --global http.proxy http[s]://userName:password@proxyaddress:port
+Add Proxy setting to access GIT repository
+
+****************************************************************************************
