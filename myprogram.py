@@ -48,6 +48,8 @@ print(List[:2])
 
 Tuples = ('sa',12,2.5)
 print(Tuples)
+print(Tuples.count(2.5))
+print(Tuples.index(2.5))
 
 List_Tuples = [(1,2,'s'),(3.3,3.3,'sss'),(1,4,6)]
 print(List_Tuples)
